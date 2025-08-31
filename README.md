@@ -1,47 +1,47 @@
 # SensorMonitor - C++
 
-Un projet C++ de simulation de capteurs pour la programmation orientée objet et se préparer à un environnement embarqué.
+A C++ sensor simulation project for object-oriented programming and preparation for embedded environments.
 
 ## Description
 
-Ce projet implémente un système de simulation de capteurs en C++ utilisant la programmation orientée objet. Il démontre l'utilisation de classes abstraites, l'héritage et le polymorphisme pour créer différents types de capteurs (température, pression).
+This project implements a sensor simulation system in C++ using object-oriented programming. It demonstrates the use of abstract classes, inheritance, and polymorphism to create different types of sensors (temperature, pressure).
 
-## Fonctionnalités
+## Features
 
-- **Classe abstraite `Capteur`** : Interface de base pour tous les capteurs
-- **Capteur de température** : Simule des lectures de température entre 20.0°C et 30.0°C
-- **Capteur de pression** : Simule des lectures de pression entre 990 hPa et 1020 hPa
-- **Système extensible** : Facile d'ajouter de nouveaux types de capteurs
+- **Abstract `Capteur` class** : Base interface for all sensors
+- **Temperature sensor** : Simulates temperature readings between 20.0°C and 30.0°C
+- **Pressure sensor** : Simulates pressure readings between 990 hPa and 1020 hPa
+- **Extensible system** : Easy to add new sensor types
 
-## Structure du projet
+## Project Structure
 
 ```
 SensorMonitor/
 ├── src/
-│   ├── capteur.hpp      # Classe abstraite Capteur
-│   ├── capteur.cpp      # Implémentation de la classe Capteur
-│   └── main.cpp         # Programme principal avec démonstration
-├── makefile             # Script de compilation
-├── .gitignore          # Fichiers à ignorer par Git
-└── README.md           # Ce fichier
+│   ├── capteur.hpp      # Abstract Capteur class
+│   ├── capteur.cpp      # Capteur class implementation
+│   └── main.cpp         # Main program with demonstration
+├── makefile             # Compilation script
+├── .gitignore          # Files to ignore by Git
+└── README.md           # This file
 ```
 
-## Prérequis
+## Prerequisites
 
-- Compilateur C++ compatible C++17 (g++, clang++, etc.)
-- Make (pour la compilation)
+- C++17 compatible compiler (g++, clang++, etc.)
+- Make (for compilation)
 
-## Compilation et exécution
+## Compilation and Execution
 
 ```bash
-# Compiler le projet
+# Compile the project
 make
 
-# Exécuter le programme
+# Run the program
 ./sensor_monitor
 ```
 
-## Exemple de sortie
+## Example Output
 
 ```
 Nom du capteur : Capteur de température
@@ -59,25 +59,23 @@ Nom du capteur : Capteur de pression
   Lecture 5 : 1015.6 hPa
 ```
 
-## Nettoyage
+## Cleanup
 
 ```bash
-# Supprimer les fichiers compilés
+# Remove compiled files
 make clean
 ```
 
 ## Architecture
 
-Le projet utilise le pattern de conception **Template Method** avec une classe abstraite `Capteur` qui définit l'interface commune pour tous les capteurs. Chaque capteur concret implémente la méthode virtuelle pure `lireValeur()` pour fournir ses propres données simulées.
+The project uses the **Template Method** design pattern with an abstract `Capteur` class that defines the common interface for all sensors. Each concrete sensor implements the pure virtual method `lireValeur()` to provide its own simulated data.
 
-## Extensions possibles
+## Possible Extensions
 
-- Ajout de nouveaux types de capteurs (humidité, luminosité, etc.)
-- Interface graphique pour visualiser les données
-- Sauvegarde des données dans un fichier
-- Communication réseau pour simuler des capteurs distants
-- Interface pour environnement embarqué (Arduino, Raspberry Pi)
+- Adding new sensor types (humidity, light, etc.)
+- Graphical interface for data visualization
+- Data saving to file
+- Network communication to simulate remote sensors
+- Interface for embedded environment (Arduino, Raspberry Pi)
 
-## Licence
 
-Ce projet est fourni à des fins éducatives.

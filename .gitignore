@@ -1,0 +1,37 @@
+# Fichiers de compilation
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Binaires
+sensor_monitor
+sensor_monitor.exe
+
+# Dossiers de build
+obj/
+build/
+bin/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Fichiers de sauvegarde
+*.bak
+*.backup

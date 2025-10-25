@@ -13,18 +13,6 @@ This project implements a sensor simulation system in C++ using object-oriented 
 - **Pressure sensor** : Simulates pressure readings between 990 hPa and 1020 hPa
 - **Extensible system** : Easy to add new sensor types
 
-## Project Structure
-
-```
-SensorMonitor/
-├── src/
-│   ├── capteur.hpp      # Abstract Capteur class
-│   ├── capteur.cpp      # Capteur class implementation
-│   └── main.cpp         # Main program with demonstration
-├── makefile             # Compilation script
-├── .gitignore          # Files to ignore by Git
-└── README.md           # This file
-```
 
 ## Prerequisites
 
@@ -69,13 +57,5 @@ make clean
 ## Architecture
 
 The project uses the **Template Method** design pattern with an abstract `Capteur` class that defines the common interface for all sensors. Each concrete sensor implements the pure virtual method `lireValeur()` to provide its own simulated data.
-
-## Possible Extensions
-
-- Adding new sensor types (humidity, light, etc.)
-- Graphical interface for data visualization
-- Data saving to file
-- Network communication to simulate remote sensors
-- Interface for embedded environment (Arduino, Raspberry Pi)
 
 
